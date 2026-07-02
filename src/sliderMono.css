@@ -1,0 +1,102 @@
+/* Estilo Imagens */
+
+.slider-mono {
+  position: relative;
+  width: 50vw;
+  max-width: 50vw;
+  height: 500px;
+  margin: auto;
+  overflow: hidden;
+  display: flex-end;
+}
+
+.slide-mono {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: translatex(100%, 2s);
+}
+
+.slide-mono.ativo {
+  opacity: 1;
+}
+
+/* Botões Slides */
+.navigation-manual-mono {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.manual-btn-mono {
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn-mono:not(:last-child) {
+  margin-right: 10px;
+}
+
+.manual-btn-mono:hover {
+  background-color: #fff;
+}
+
+#radio1-mono:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2-mono:checked ~ .first {
+  margin-left: -50%;
+}
+
+#radio2-mono:checked ~ .first {
+  margin-left: -50%;
+}
+
+#radio1-mono:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio1-mono:checked ~ .first {
+  display: flex;
+}
+
+#radio1-mono:checked ~ .second,
+#radio1-mono:checked ~ .third {
+  display: none;
+}
+
+#radio2-mono:checked ~ .second {
+  display: flex;
+}
+
+#radio2-mono:checked ~ .first,
+#radio2-mono:checked ~ .third {
+  display: none;
+}
+
+#radio3-mono:checked ~ .third {
+  display: flex;
+}
+
+#radio3-mono:checked ~ .first,
+#radio3-mono:checked ~ .second {
+  display: none;
+}
+
+.slides-mono input {
+  display: none;
+}
+
+.slides-mono.ativo {
+  opacity: 1;
+}
+
+.radio-btn-mono.ativo ~ input {
+  background-color: #fff;
+}

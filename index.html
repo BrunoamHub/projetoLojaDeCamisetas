@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./src/slider.css" />
+    <link rel="stylesheet" href="./src/sliderMono.css" />
+    <link rel="stylesheet" href="inputPesquisar/pesquisar.css">
+    <title>Loja de Camisetas</title>
+  </head>
+  <body>
+    <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
+    
+    <!-- Menu Navegação -->
+    <nav class="absolute bg-[#434343] justify-between fixed z-100 w-full">
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-30 items-center">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <!-- Mobile menu button-->
+            <button
+              type="button"
+              command="--toggle"
+              commandfor="mobile-menu"
+              class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500"
+            >
+              <span class="absolute -inset-0.5"></span>
+              <span class="sr-only">Open main menu</span>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                data-slot="icon"
+                aria-hidden="true"
+                class="size-6 in-aria-expanded:hidden"
+              >
+                <path
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                data-slot="icon"
+                aria-hidden="true"
+                class="size-6 not-in-aria-expanded:hidden"
+              >
+                <path
+                  d="M6 18 18 6M6 6l12 12"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="flex shrink-0 items-center">
+            <img
+              src="https://lojadecamisetas.amaralsites.com/wp-content/uploads/elementor/thumbs/Sem_nome__100_x_100_mm___1_-removebg-preview-rlmjhnx4qsz3466an92rza8vtcjn2s3tt5pda60wyw.png"
+              alt="Your Company"
+              class="h-25 w-auto"
+            />
+          </div>
+          <div
+            class="flex flex-1 items-center justify-between sm:items-stretch sm:justify-center"
+          >
+            <div class="hidden sm:block">
+              <div class="flex text-center">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+                <a
+                  href="/index.html"
+                  class="rounded-md px-6 py-3 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-[#caa343]"
+                  >Home</a
+                ><div>
+                <button
+                  popovertarget="desktop-menu-solutions"
+                  class="rounded-md inline-flex items-center px-6 py-3 font-medium text-gray-300 cursor-pointer text-base hover:bg-white/5 hover:text-[#caa343]"
+                >
+                  Loja
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-caret-down-fill size-4 ml-1"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                      />
+                    </svg>
+                    <!-- <button> -->
+                    <el-popover
+                      id="desktop-menu-solutions"
+                      class="ml-233 mt-22 w-50 rounded-md bg-[#434343] justify-center shadow-lg outline-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
+                      ><a
+                        href="/loja/timesNacionais/timesNacionais.html"
+                        class="rounded-md pl-5 py-3 text-base font-medium flex text-gray-300 hover:bg-white/5 hover:text-[#caa343]"
+                        >Times Nacionais</a
+                      >
+                      <a
+                        href="/loja/timesInternacionais/timesInternacionais.html"
+                        class="rounded-md pl-5 py-3 text-base font-medium flex text-gray-300 hover:bg-white/5 hover:text-[#caa343]"
+                        >Times Internacionais</a
+                      >
+                    </el-popover></span
+                  ></div>
+
+                  <!-- <svg
+                    viewBox="0 0 20 20"
+                    fill=""
+                    data-slot="icon"
+                    aria-hidden="true"
+                    class="size-5 rounded-md px-3 py-3 font-medium text-gray-300 hover:bg-white/5 hover:text-[#caa343] fill-current"
+                  >
+                    <path
+                      d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                      clip-rule="evenodd"
+                      fill-rule="evenodd"
+                    />
+                  </svg> -->
+                </button>
+                <a
+                  href="#"
+                  class="rounded-md px-6 py-3 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-[#caa343]"
+                  >Sobre</a
+                >
+                 <a
+                  href="#"
+                  class="rounded-md px-6 py-3 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-[#caa343]"
+                  >Contato</a
+                >
+                <a
+                  href="#"
+                  class="rounded-md px-6 py-3 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-[#caa343]"
+                  >Minha Conta</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="w-full max-w-sm min-w-[300px]">
+            <form class="relative flex items-center w-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="absolute w-5 h-5 top-2.5 left-2.5 text-gray-400"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+
+              <!-- Pesquisando Camisetas -->
+              <!-- Input Pequisar -->
+              <div class="flex">                 
+                <input
+                id="inputPesquisa"
+                type="text"
+                class="w-full bg-transparent placeholder:text-gray-400 text-gray-300 text-sm border border-gray-200 rounded-md pr-20 py-2 transition duration-300 ease focus:outline-none focus:border-gray-400 hover:border-gray-300 shadow-sm focus:shadow"
+                placeholder="Digite sua pesquisa..."
+                aria-label="Search"
+                />
+                <ul class="justify-center w-full itens-center items">
+                  <!-- Pesquisa Botafogo -->
+                  <li class="p-1 text-center w-full item">
+                    <div class="item-content">
+                      <a href="" class="itens-center text-center justify-center flex item-image">
+                        <img width="50px" src="./loja/timesNacionais/img/Botafogo.png" alt="">
+                        <h2 class="flex bg-[#caa343] pr-6 pl-6 pt-4 pb-4 w-full text-base text-center item-title itens-center justify-center">Camiseta Botafogo</h2>
+                      </a>
+                    </div>
+                  </li>
+                  <!-- Pesquisa São Paulo -->
+                  <li class="flex p-1 text-center w-full item item2">
+                    <div class="item-content">
+                      <a href="" class="itens-center text-center justify-center flex item-image">
+                        <img width="50px" src="./loja/timesNacionais/img/spfc.png" alt="">
+                        <h2 class="flex bg-[#caa343] pr-6 pl-6 pt-4 pb-4 w-full text-base text-center item-title itens-center justify-center">Camiseta São Paulo</h2>
+                      </a>
+                    </div>
+                  </li>
+                  <!-- Pesquisa Galo -->
+                  <li class="flex p-1 text-center w-full item item3">
+                    <div class="item-content">
+                      <a href="" class="itens-center text-center justify-center flex item-image">
+                        <img width="50px" src="./loja/timesNacionais/img/Galo.png" alt="">
+                        <h2 class="flex bg-[#caa343] pr-6 pl-6 pt-4 pb-4 w-full text-base text-center item-title itens-center justify-center">Camiseta Galo</h2>
+                      </a>
+                    </div>
+                  </li>
+                  <!-- Pesquisa Corinthians -->
+                  <li class="flex p-1 text-center w-full item item4">
+                    <div class="item-content">
+                      <a href="" class="itens-center text-center justify-center flex item-image">
+                        <img width="50px" src="./loja/timesNacionais/img/Corinthians.png" alt="">
+                        <h2 class="flex bg-[#caa343] pr-6 pl-6 pt-4 pb-4 w-full text-base text-center item-title itens-center justify-center">Camiseta Corinthians</h2>
+                      </a>
+                    </div>
+                  </li>
+                  <!-- Pesquisa Flu -->
+                  <li class="flex p-1 text-center w-full item item5">
+                    <div class="item-content">
+                      <a href="" class="itens-center text-center justify-center flex item-image">
+                        <img width="50px" src="./loja/timesNacionais/img/Flu.png" alt="">
+                        <h2 class="flex bg-[#caa343] pr-6 pl-6 pt-4 pb-4 w-full text-base text-center item-title itens-center justify-center">Camiseta Fluminense</h2>
+                      </a>
+                    </div>
+                  </li>                        
+                </ul>
+              </div>
+              <!-- <button
+                class="rounded-md bg-[#caa343] py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:bg-gray-300 hover:text-[#caa343] focus:bg-gray-300 focus:shadow-none active:bg-gray-300 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2 cursor-pointer"
+                type="button"
+                id="btnPesquisa"
+              >
+                Pesquisar
+              </button> -->
+            </form>
+          </div>
+          <div
+            class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+          >
+            <!-- Profile dropdown -->
+            <el-dropdown class="relative ml-3">
+              <button
+                class="relative flex rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+              >
+                
+                <span class="sr-only">Open user menu</span>
+               
+                <i class="bi bi-cart3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    class="bi text-gray-300 bi-cart3 size-10 hover:text-[#caa343] transition-colors duration-300 cursor-pointer"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
+                    />
+                  </svg>
+                </i>
+              </button>
+
+              <el-menu
+                anchor="bottom end"
+                popover
+                class="w-48 origin-top-right rounded-md bg-white py-1 shadow-lg outline outline-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:outline-hidden"
+                  >Your profile</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:outline-hidden"
+                  >Settings</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:outline-hidden"
+                  >Sign out</a
+                >
+              </el-menu>
+            </el-dropdown>
+          </div>
+        </div>
+      </div>
+
+      <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
+        <div class="space-y-1 px-2 pt-2 pb-3">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+          <a
+            href="#"
+            aria-current="page"
+            class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+            >Dashboard</a
+          >
+          <a
+            href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+            >Team</a
+          >
+          <a
+            href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+            >Projects</a
+          >
+          <a
+            href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+            >Calendar</a
+          >
+        </div>
+      </el-disclosure>
+    </nav>
+
+    <!-- Seção de Capa Principal -->
+    <main class="flex w-full pt-30 bg-no-repeat bg-cover bg-[url(/img/papelPArede.png)]">
+      <!-- Seção Principal -->
+       
+      <section class="flex h-150 flex mx-auto justify-around w-full items-center">
+        <!-- <img
+          src="/img/papelPArede.png"
+          class="bg-center bg-no-repeat h-full w-full object-cover"
+          alt="Foto de Capa"
+        /> -->
+
+        <div class="inset-0 flex w-300 text-white justify-center items-center ">
+          <div class="justify-center items-center flex flex-col gap-6 items-start">
+            <h1
+              class="text-left text-5xl w-150 font-black"
+            >
+              Vista sua paixão. Jogue com estilo.
+            </h1>
+            <p class="text-left w-150 text-white/80 text-lg">
+              As melhores camisetas de futebol, dos clássicos aos lançamentos, com
+              qualidade e conforto para quem vive o jogo dentro e fora de campo.
+            </p>
+            <button
+              class="rounded-md bg-[#caa343] py-2 px-4 border border-transparent text-center text-base text-white transition-all shadow-md hover:bg-gray-300 hover:text-[#caa343] focus:bg-gray-300 focus:shadow-none active:bg-gray-300 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none cursor-pointer"
+            >
+              Ver camisetas
+            </button>
+          </div>
+          <div class="slider-mono flex flex-end mr-0">
+            <div class="slides-mono mr-0">
+              <div class="slide-mono ativo">
+                <img
+                  src="/img/Camiseta-sp.png"
+                  class="h-125 cursor-pointer"
+                  alt="Foto do Slider"
+                />
+              </div>
+              <div class="slide-mono">
+                <img
+                  src="/img/Flamengo.png"
+                  class="h-125"
+                  alt="Foto do Slider"
+                />
+              </div>
+              <div class="slide-mono">
+                <img
+                  src="/img/real.png"
+                  class="h-125 "
+                  alt="Foto do Slider"
+                />
+              </div>
+            </div>
+          </div>
+        </div>  
+      </section>
+    </main>
+
+    <!-- Seção de Compras e Envio -->
+    <section class="bg-[#434343]">
+      <div class="flex inset-0 flex-col-3 gap-6 items-center mx-auto justify-around w-300 text-center py-25">
+        <div class="flex rounded-xl p-7 w-full h-60 border-solid border-[#caa343] bg-black border-1 flex-col gap-4 items-center justify-center text-center">
+          <i class="bi bi-truck bg-[white] rounded-full p-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#caa343" class="bi bi-truck" viewBox="0 0 16 16">
+              <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+            </svg>
+          </i>
+          <h2 class="flex text-[#caa343] text-3xl text-lg font-bold">Enviamos para todo o Brasil</h2>  
+          <p class="flex text-base text-white">
+            Enviamos camisetas de futebol para todo o Brasil com rapidez, segurança.
+          </p>
+        </div>
+        <div class="flex rounded-xl w-full h-60 flex-col p-7 border-solid border-[#caa343] bg-black border-1 gap-4 items-center justify-center text-center">
+          <i class="bi bi-lock-fill bg-[white] rounded-full p-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#caa343" class="bi bi-lock-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 0a4 4 0 0 1 4 4v2.05a2.5 2.5 0 0 1 2 2.45v5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 13.5v-5a2.5 2.5 0 0 1 2-2.45V4a4 4 0 0 1 4-4m0 1a3 3 0 0 0-3 3v2h6V4a3 3 0 0 0-3-3"/>
+            </svg>
+          </i>
+          <h2 class="flex text-[#caa343] text-3xl text-lg font-bold">Compre com segurança</h2>
+          <p class="flex text-base text-white">
+            Compre camisetas de futebol originais com total segurança e garantia de qualidade.
+          </p>
+        </div>
+        <div class="flex rounded-xl w-full h-60 flex-col p-7 border-solid border-[#caa343] bg-black border-1 gap-4 items-center justify-center text-center"> 
+          <i class="bi bi-credit-card bg-[white] rounded-full p-3 ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#caa343" class="bi bi-credit-card" viewBox="0 0 16 16">
+              <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z"/>
+              <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+            </svg>
+          </i>
+          <h2 class="flex text-[#caa343] text-3xl text-lg font-bold">Pague como quiser</h2>
+          <p class="flex text-base text-white">
+            Aqui você define o valor e ainda garante qualidade e paixão pelo futebol.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Camisetas em Promoção -->
+    <section class="bg-[#434343] pb-25 w-fulll items-ceter justify-center">
+      <div class="flex inset-0 flex-col-3 gap-6 items-center mx-auto justify-around w-300 text-center">
+        <h2 class="flex text-[#fff] pb-8 text-5xl font-bold">Camisetas com <span class="text-[#caa343] ml-2">Preços Imperdíveis</span></h2>
+      </div>
+      <div class="slider w-full relative overflow-hidden flex items-center justify-center">
+        <div class="slides h-full w-full flex justify-center items-center">
+          
+          <!-- Slide images -->
+          <div class="slide ativo flex">
+            <img src="/img/Arsenal.png" alt="Camiseta Arsenal" class="w-100 p-2 cursor-pointer">
+            <img src="/img/Dortmund.png" alt="Camiseta Dortmund" class="w-100 p-2 cursor-pointer">
+            <img src="/img/Chelsea.png" alt="Camiseta Chelsea" class="w-100 p-2 cursor-pointer">
+          </div>
+          <div class="slide flex">  
+            <img src="/img/Dortmund.png" alt="Camiseta Dortmund" class="w-100 p-2 cursor-pointer">
+            <img src="/img/Chelsea.png" alt="Camiseta Chelsea" class="w-100 p-2 cursor-pointer">          
+            <img src="/img/Arsenal.png" alt="Camiseta Arsenal" class="w-100 p-2 cursor-pointer">
+          </div>
+          <div class="slide flex">
+            <img src="/img/Chelsea.png" alt="Camiseta Chelsea" class="w-100 p-2 cursor-pointer">
+            <img src="/img/Arsenal.png" alt="Camiseta Arsenal" class="w-100 p-2 cursor-pointer">            
+            <img src="/img/Dortmund.png" alt="Camiseta Dortmund" class="w-100 p-2 cursor-pointer">
+          </div>
+        </div>
+      </div>
+        <!-- Fim Slide images -->
+    </section>
+
+    <section class="bg-black pt-25 pb-25">
+      <H1 class="text-center text-white text-5xl font-black"><span class="text-[#caa343]">As Melhores Camisetas</span> de Times de Futebol</H1>
+    </section>  
+
+    <!-- Seção de Camisetas em Destaque -->
+    <section class="bg-[url('/img/bg-campo.png')] bg-cover bg-center bg-no-repeat w-full" id="listaPesquisa">
+      <div class="w-full h-full flex flex-col bg-gradient-to-t from-black/10 to-black/100 pb-25 pt-25 gap-10 items-center justify-center" id="listaItens">
+        <div class="flex flex-col-3 gap-6 items-center mx-auto justify-center w-300 text-center itemLista">
+          <!-- Camiseta Palmeiras -->
+          <div>
+            <a href="http://example.com" target="_blank" rel="noopener noreferrer">
+              <img src="/img/Palmeiras.png" alt="Camiseta Palmeiras" class="w-130 h-95">
+            </a>
+            <div class="flex flex-col bg-[#000] border-2 border-[#fff] gap-2 mt-1 p-3 items-start">
+              <h3 class="flex text-[#fff] text-left text-lg font-light">Camiseta Palmeiras I 25/26 s/n Torcedor Ipsum Masculina - Verde</h3>
+            <div class="flex gap-1">
+              <i class="bi bi-star-fill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(240, 173, 78)" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+              </i>
+              <i class="bi bi-star-fill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(240, 173, 78)" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+              </i>
+              <i class="bi bi-star-fill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(240, 173, 78)" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+              </i>
+              <i class="bi bi-star-fill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(240, 173, 78)" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+              </i>
+              <i class="bi bi-star-fill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(240, 173, 78)" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73  -.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+              </i>
+            </div>
+            <h3 class="flex text-[#fff] text-left text-lg font-light mt-2">A partir de</h3>
+            <h2 class="flex text-[#caa343] text-left text-4xl font-bold mt-1">R$ 249,00</h2> 
+          </div>  
+        </div>
+        
+        <!-- Camiseta Gremio -->
+        <div class="itemLista">
+          <a href="http://example.com" target="_blank" rel="noopener noreferrer">
+            <img src="/img/Gremio.png" alt="Camiseta Gremio" class="w-130 h-95">
+          </a>
+          <div class="flex flex-col bg-[#000] border-2 border-[#fff] gap-2 mt-1 p-3 items-start">
+            <h3 class="flex text-[#fff] text-left text-lg font-light">Camiseta Grêmio I 25/26 s/n Torcedor Ipsum Masculina - Tricolor</h3>
+            <div class="flex gap-1">
+              <i class="bi bi-star-fill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(240, 173, 78)" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+              </i>
+              <i class="bi bi-star-fill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(240, 173, 78)" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+              </i>
+              <i class="bi bi-star-fill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(240, 173, 78)" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+              </i>
+              <i class="bi bi-star-fill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(240, 173, 78)" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+              </i>
+              <i class="bi bi-star-fill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(240, 173, 78)" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73  -.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+              </i>
+            </div>
+            <h3 class="flex text-[#fff] text-left text-lg font-light mt-2">A partir de</h3>
+            <h2 class="flex text-[#caa343] text-left text-4xl font-bold mt-1">R$ 249,00</h2> 
+          </div>  
+        </div>
+        
+        <!-- Camiseta Cruzeiro -->
+        <div class="itemLista">
+          <a href="http://example.com" target="_blank" rel="noopener noreferrer">
+            <img src="/img/Cruzeiro.png" alt="Camiseta Cruzeiro" class="w-130 h-95">
+          </a>
+          <div class="flex flex-col bg-[#000] border-2 border-[#fff] gap-2 mt-1 p-3 items-start">
+            <h3 class="flex text-[#fff] text-left text-lg font-light">Camiseta Cruzeiro I 25/26 s/n Torcedor Ipsum Masculina - <br> Azul</h3>
+            <div class="flex gap-1">
+              <i class="bi bi-star-fill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(240, 173, 78)" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+              </i>
+              <i class="bi bi-star-fill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(240, 173, 78)" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+              </i>
+              <i class="bi bi-star-fill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(240, 173, 78)" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+              </i>
+              <i class="bi bi-star-fill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(240, 173, 78)" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+              </i>
+              <i class="bi bi-star-fill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(240, 173, 78)" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73  -.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+              </i>
+            </div>
+            <h3 class="flex text-[#fff] text-left text-lg font-light mt-2">A partir de</h3>
+            <h2 class="flex text-[#caa343] text-left text-4xl font-bold mt-1">R$ 249,00</h2> 
+          </div>        
+        </div>
+        
+        <!-- Camiseta Bahia -->
+        <div class="itemLista">
+          <a href="http://example.com" target="_blank" rel="noopener noreferrer">
+            <img src="/img/Bahia.png" alt="Camiseta Bahia" class="w-130 h-95">
+          </a>
+          <div class="flex flex-col bg-[#000] border-2 border-[#fff] gap-2 mt-1 p-3 items-start">
+            <h3 class="flex text-[#fff] text-left text-lg font-light">Camiseta Bahia I 25/26 s/n Torcedor Ipsum Masculina - <br> Azul</h3>
+            <div class="flex gap-1">
+              <i class="bi bi-star-fill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(240, 173, 78)" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+              </i>
+              <i class="bi bi-star-fill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(240, 173, 78)" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+              </i>
+              <i class="bi bi-star-fill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(240, 173, 78)" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+              </i>
+              <i class="bi bi-star-fill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(240, 173, 78)" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+              </i>
+              <i class="bi bi-star-fill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(240, 173, 78)" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73  -.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+              </i>
+            </div>
+            <h3 class="flex text-[#fff] text-left text-lg font-light mt-2">A partir de</h3>
+            <h2 class="flex text-[#caa343] text-left text-4xl font-bold mt-1">R$ 249,00</h2> 
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Rodapé -->
+    <footer class="bg-[#434343]">
+      <div class="flex inset-0 flex-col-3 gap-6 mx-auto justify-around w-300 py-5">
+        <img
+        src="https://lojadecamisetas.amaralsites.com/wp-content/uploads/elementor/thumbs/Sem_nome__100_x_100_mm___1_-removebg-preview-rlmjhnx4qsz3466an92rza8vtcjn2s3tt5pda60wyw.png"
+        alt="Logo da Loja de Camisetas"
+        class="flex h-65 w-65 object-cover"
+        />
+        <div class="flex flex-col gap-4 text-left">
+          <h2 class="text-[#caa343] font-bold">Menu:</h2>
+          <ol class="text-left">
+            <a href="/index.html" rel="noopener noreferrer">
+              <li class="text-gray-300 font-medium hover:text-[#caa343] py-2 cursor-pointer">Home</li>
+            </a>
+            <a href="http://example.com" target="_blank" rel="noopener noreferrer">
+              <li class="text-gray-300 font-medium hover:text-[#caa343] py-2 cursor-pointer">Loja</li>
+            </a>
+            <a href="http://example.com" target="_blank" rel="noopener noreferrer">
+            <li class="text-gray-300 font-medium hover:text-[#caa343] py-2 cursor-pointer">Sobre</li>
+            </a>
+            <a href="http://example.com" target="_blank" rel="noopener noreferrer">
+              <li class="text-gray-300 font-medium hover:text-[#caa343] py-2 cursor-pointer">Contato</li>
+            </a>
+            <a href="http://example.com" target="_blank" rel="noopener noreferrer">
+              <li class="text-gray-300 font-medium hover:text-[#caa343] py-2 cursor-pointer">Minha Conta</li>
+            </a>
+          </ol>
+        </div>  
+        <div class="gap-4 space-around items-top text-top">
+          <h2 class="flex text-[#caa343] font-bold">Redes Sociais:</h2>
+          <div class="flex space-around mt-6 gap-6 text-left">
+            <!-- Facebook -->
+            <a href="http://example.com" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-facebook text-white hover:text-[#caa343] cursor-pointer" width="30" height="30" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a href="http://example.com" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-instagram text-white hover:text-[#caa343] cursor-pointer" width="30" height="30" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+              </svg>
+            </a>
+            <!-- YouTube -->
+            <a href="http://example.com" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-youtube text-white hover:text-[#caa343] cursor-pointer" viewBox="0 0 16 16">
+              <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+              </svg>
+            </a>
+          </div>  
+        </div>
+        <div class="flex flex-col gap-4 items-top text-top">
+          <h2 class="flex text-[#caa343] font-bold">Localização:</h2>
+          <div class="flex items-center">
+            <i class="bi bi-geo-alt-fill text-white"></i>
+            <p class="text-gray-300 font-medium">Rua das Camisetas, 123 - São Paulo, SP</p>
+        </div>        
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"
+      type="module"
+    ></script>
+    <script src="/js/slider.js"></script>
+    <script src="/js/sliderMono.js"></script>
+    <script src="/inputPesquisar/pesquisar.js"></script>
+  </body>
+</html>

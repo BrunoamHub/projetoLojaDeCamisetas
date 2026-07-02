@@ -1,0 +1,101 @@
+/* Estilo Imagens */
+
+.slider {
+  position: relative;
+  width: 1200px;
+  max-width: 1200px;
+  height: 500px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: translatex(100%, 2s);
+}
+
+.slide.ativa {
+  opacity: 1;
+}
+
+/* Botões Slides */
+.navigation-manual {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.manual-btn {
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 10px;
+}
+
+.manual-btn:hover {
+  background-color: #fff;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -50%;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -50%;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio1:checked ~ .first {
+  display: flex;
+}
+
+#radio1:checked ~ .second,
+#radio1:checked ~ .third {
+  display: none;
+}
+
+#radio2:checked ~ .second {
+  display: flex;
+}
+
+#radio2:checked ~ .first,
+#radio2:checked ~ .third {
+  display: none;
+}
+
+#radio3:checked ~ .third {
+  display: flex;
+}
+
+#radio3:checked ~ .first,
+#radio3:checked ~ .second {
+  display: none;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide.ativo {
+  opacity: 1;
+}
+
+.radio-btn.ativo ~ input {
+  background-color: #fff;
+}

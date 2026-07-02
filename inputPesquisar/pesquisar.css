@@ -1,0 +1,43 @@
+.item {
+  visibility: hidden;
+  display: flex;
+}
+
+.items {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 45px;
+  position: absolute;
+  z-index: 900;
+}
+
+.item1,
+.item2,
+.item3,
+.item4,
+.item5 {
+  visibility: hidden;
+}
+
+#inputPesquisa {
+  padding-left: 35px;
+  width: 350px;
+}
+
+#listaProdutos li {
+  align-items: left;
+  justify-content: left;
+  width: 350px;
+}
+
+#listaProdutos li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.open {
+  visibility: visible;
+}
