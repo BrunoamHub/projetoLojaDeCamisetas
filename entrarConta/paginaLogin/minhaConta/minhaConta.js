@@ -29,3 +29,13 @@ const msgDetalhesConta = document.getElementById('msgDetalhesConta');
 detalhesContaBtn.addEventListener('click', () => {
   msgDetalhesConta.classList.toggle('hidden');
 });
+
+//Saindo da Conta
+const sairBtn = document.getElementById('SairBtn');
+sairBtn.addEventListener(
+  'click',
+  () => {
+    window.location.href = '/entrarConta/paginaLogin/paginaLogin.html';
+  },
+  2000,
+);

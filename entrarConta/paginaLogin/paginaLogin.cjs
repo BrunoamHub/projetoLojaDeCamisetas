@@ -9,8 +9,8 @@ document
     const password = document.getElementById('password').value;
 
     // Captura os elemetos de mensagem
-    const errorMessage = document.getElementById('error_message');
-    const successMessage = document.getElementById('success_message');
+    let errorMessage = document.getElementById('error_message');
+    let successMessage = document.getElementById('success_message');
 
     // Limpa as mensagens anteriores
     errorMessage.style.display = 'none';
@@ -28,17 +28,29 @@ document
     const emailValido = 'email@example.com';
     const senhaValida = 'senha123';
 
+    (fetch('./paginaLogin.cjs'),
+      {
+        method: 'POST',
+        body: JSON.stringify({
+          emailValido,
+          senhaValida,
+        }),
+      });
+
     // Validação 2: Verifica se o email e senha correspondem às credenciais válidas
     if (email === emailValido && password === senhaValida) {
       // Login bem-sucedido
-      successMessage.textContent = 'Login bem-sucedido!';
+      successMessage.textContent = 'Credenciais válidas!';
       successMessage.style.display = 'block';
 
       // Redireciona para a página "minhaConta.html" após 2 segundos
       setTimeout(() => {
+        alert((successMessage.textContent = 'Login bem-sucedido!'));
         window.location.href =
           '/entrarConta/paginaLogin/minhaConta/minhaConta.html';
-      }, 2000);
+      }, 1000);
+
+      // Armazena as credenciais válidas
     } else {
       // Login falhou
       errorMessage.textContent = 'Email ou senha inválidos.';
