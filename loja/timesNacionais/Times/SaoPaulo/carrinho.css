@@ -1,0 +1,51 @@
+.cart-icon {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-icon span {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #caa343;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+}
+
+.sidebar-container {
+  position: fixed;
+  right: 0;
+  flex-direction: row-reverse;
+  top: 0;
+  z-index: 1000;
+  background-color: #252525;
+  opacity: 0;
+}
+
+.btn-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  background-color: #caa343;
+  border-radius: 100%;
+  color: #fff;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.open {
+  display: flex;
+  opacity: 1;
+}
+
+/* --#{$prefix}btn-close-color: #{$btn-close-color};
+--#{$prefix}btn-close-bg: #{ escape-svg($btn-close-bg) };
+--#{$prefix}btn-close-opacity: #{$btn-close-opacity};
+--#{$prefix}btn-close-hover-opacity: #{$btn-close-hover-opacity};
+--#{$prefix}btn-close-focus-shadow: #{$btn-close-focus-shadow};
+--#{$prefix}btn-close-focus-opacity: #{$btn-close-focus-opacity};
+--#{$prefix}btn-close-disabled-opacity: #{$btn-close-disabled-opacity}; */
